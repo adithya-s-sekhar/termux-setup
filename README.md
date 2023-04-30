@@ -9,7 +9,7 @@
 
 1. Install [termux](https://github.com/termux/termux-app/releases/latest) and [termux-widget](https://github.com/termux/termux-widget/releases/latest) from github.
 2. Open termux, grant storage permission with `termux-setup-storage` command.
-3. Download termux-setup.sh from this repo to your 'Internal Storage' or your Download folder or anywhere.
+3. Download [termux-setup.sh](https://github.com/adithya-s-sekhar/termux-setup/raw/main/termux-setup.sh) from this repo to your 'Internal Storage' or your Download folder or anywhere.
 4. Navigate to the folder using termux, for example;
   - `cd /sdcard/`
   - `cd /sdcard/Download/`
