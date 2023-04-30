@@ -1,11 +1,11 @@
 # My personal setup for termux.
 
-## It includes the following
+## Includes
 
-1. yt-dlp for video downloads
-2. A home screen widget for an http server serving 'Internal Storage' at http://\<device_ip>:8080/ or http://localhost:8080/
+1. yt-dlp for video downloads.
+2. A home screen widget for an http server serving 'Internal Storage' at http://\<device_ip>:8080/ or http://localhost:8080/.
 
-## Installation instructions
+## How to Install
 
 1. Install [termux](https://github.com/termux/termux-app/releases/latest) and [termux-widget](https://github.com/termux/termux-widget/releases/latest) from github.
 2. Open termux, grant storage permission with `termux-setup-storage` command.
@@ -39,6 +39,9 @@ There are plans to bring [AYC](https://github.com/adithya-s-sekhar/advanced-yout
 ## Links
 
 [Termux](https://github.com/termux/termux-app/)
+
 [Termux:Widget](https://github.com/termux/termux-widget/)
+
 [the-termux-project](https://github.com/adithya-s-sekhar/the-termux-project/)
+
 [Advanced Youtube Client - AYC](https://github.com/adithya-s-sekhar/advanced-youtube-client-ayc/)
