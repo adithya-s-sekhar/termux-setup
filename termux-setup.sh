@@ -1,7 +1,7 @@
 apt update -y
-apt upgrade -y
+yes | apt upgrade -y
 apt update -y
-apt upgrade -y
+yes | apt upgrade -y
 
 apt install python ffmpeg aria2 -y
 
