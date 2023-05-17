@@ -3,63 +3,86 @@ yes | apt upgrade -y
 apt update -y
 yes | apt upgrade -y
 
-apt install python ffmpeg aria2 -y
-
-pip install yt-dlp
-
 cd ~
 
-mkdir .shortcuts
-cd .shortcuts
-mkdir tasks
-cd tasks
-rm server
+# cleaning old files
+rm -rf termux-setup
 
+# creating setup folder
+mkdir termux-setup
+cd termux-setup
+
+# creating new scripts
+
+## python web server
 echo "cd /sdcard">>server
 echo "python -m http.server 8080">>server
-
 dos2unix server
-chmod +x server
 
-cd ~
-
-mkdir bin
-cd bin
-
-rm termux-url-opener
-
+## termux-url-opener
 echo "cd /sdcard/Download">>termux-url-opener
 echo "yt-dlp -f bv*+ba/b --downloader aria2c -o \"%(title)s-%(height)sp-%(id)s.%(ext)s\" \"\$1\" && echo \"\$1\">>downloaded.txt && exit">>termux-url-opener
 echo "echo \"\$1\">>failed.txt">>termux-url-opener
 echo "exit">>termux-url-opener
-
 dos2unix termux-url-opener
-chmod +x termux-url-opener
 
-cd ~/../usr/bin
-
-rm batchdl
+## batchdl
 echo "cd /sdcard/Download">>batchdl
 echo "mkdir \$1">>batchdl
-echo "copy \$1.txt \$1\\">>batchdl
+echo "copy \$1.txt \$1">>batchdl
 echo "cd \$1">>batchdl
-echo "yt-dlp --ignore-errors --no-warnings --windows-filenames -f bv*+ba/b %aria2% -o \"%(title).106s-high-%(id).10s.%(ext)s\" -a \"\$1.txt\"">>batchdl
+echo "yt-dlp -f bv*+ba/b --downloader aria2c -o \"%(title)s-%(height)sp-%(id)s.%(ext)s\" -a \"\$1.txt\"">>batchdl
 echo "cd ~">>batchdl
-
 dos2unix batchdl
-chmod +x batchdl
 
-rm update-setup
+## update-setup
+
 echo "cd ~">>update-setup
-echo "rm termux-setup.sh">>update-setup
-echo "curl https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh -o termux-setup.sh">>update-setup
+echo "rm -rf termux-setup">>update-setup
+echo "cd termux-setup">>update-setup
+echo "curl https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh>termux-setup.sh">>update-setup
 echo "dos2unix termux-setup.sh">>update-setup
 echo "chmod +x termux-setup.sh">>update-setup
 echo "bash termux-setup.sh">>update-setup
-
 dos2unix update-setup
-chmod +x update-setup
+
+# creating folders
+
+mkdir ~/.shortcuts/tasks
+mkdir ~/bin
+
+# setting directory variables
+
+TASKS=~/.shortcuts/tasks
+BIN=~/bin
+USR_BIN=~/../usr/bin
+
+# deleting old files from these folders
+
+rm $TASKS/server
+rm $BIN/termux-url-opener
+rm $USR_BIN/batchdl
+rm $USR_BIN/update-setup
+
+# copying files
+
+copy server $TASKS
+copy termux-url-opener $BIN
+copy batchdl $USR_BIN
+copy update-setup $USR_BIN
+
+# setting permissions
+
+chmod +x $TASKS/server
+chmod +x $BIN/termux-url-opener
+chmod +x $USR_BIN/batchdl
+chmod +x $USR_BIN/update-setup
+
+# cleaning up install folder
 
 cd ~
+rm -rf termux-setup
 
-echo "Installed successfully"
+# finished
+
+echo "Installed Successfully"
