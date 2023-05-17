@@ -36,7 +36,7 @@ dos2unix termux-url-opener
 ## batchdl
 echo "cd /sdcard/Download">>batchdl
 echo "mkdir \$1">>batchdl
-echo "copy \$1.txt \$1">>batchdl
+echo "cp \$1.txt \$1">>batchdl
 echo "cd \$1">>batchdl
 echo "yt-dlp -f bv*+ba/b --downloader aria2c -o \"%(title)s-%(height)sp-%(id)s.%(ext)s\" -a \"\$1.txt\"">>batchdl
 echo "cd ~">>batchdl
@@ -55,6 +55,7 @@ dos2unix update-setup
 
 # creating folders
 
+mkdir ~/.shortcuts/
 mkdir ~/.shortcuts/tasks
 mkdir ~/bin
 
@@ -73,10 +74,10 @@ rm $USR_BIN/update-setup
 
 # copying files
 
-copy server $TASKS
-copy termux-url-opener $BIN
-copy batchdl $USR_BIN
-copy update-setup $USR_BIN
+cp server $TASKS
+cp termux-url-opener $BIN
+cp batchdl $USR_BIN
+cp update-setup $USR_BIN
 
 # setting permissions
 
