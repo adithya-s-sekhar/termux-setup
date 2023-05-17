@@ -41,7 +41,9 @@ cd ~/../usr/bin
 rm batchdl
 echo "cd /sdcard/Download">>batchdl
 echo "mkdir \$1">>batchdl
-echo "yt-dlp --ignore-errors --no-warnings --windows-filenames -f bv*+ba/b %aria2% -o \"\$1\%%(title).106s-high-%%(id).10s.%%(ext)s\" -a \"\$1.txt\"">>batchdl
+echo "copy \$1.txt \$1\\">>batchdl
+echo "cd \$1">>batchdl
+echo "yt-dlp --ignore-errors --no-warnings --windows-filenames -f bv*+ba/b %aria2% -o \"%(title).106s-high-%(id).10s.%(ext)s\" -a \"\$1.txt\"">>batchdl
 echo "cd ~">>batchdl
 
 dos2unix batchdl
@@ -52,7 +54,7 @@ echo "cd ~">>update-setup
 echo "rm termux-setup.sh">>update-setup
 echo "curl https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh -o termux-setup.sh">>update-setup
 echo "dos2unix termux-setup.sh">>update-setup
-echo "chmod+x termux-setup.sh">>update-setup
+echo "chmod +x termux-setup.sh">>update-setup
 echo "bash termux-setup.sh">>update-setup
 
 dos2unix update-setup
