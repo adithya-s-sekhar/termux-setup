@@ -36,14 +36,16 @@ echo "exit">>termux-url-opener
 dos2unix termux-url-opener
 chmod +x termux-url-opener
 
-rm batch
-echo "cd /sdcard/Download">>batch
-echo "mkdir \$1">>batch
-echo "yt-dlp --ignore-errors --no-warnings --windows-filenames -f bv*+ba/b %aria2% -o \"\$1\%%(title).106s-high-%%(id).10s.%%(ext)s\" -a \"\$1.txt\"">>batch
-echo "cd ~">>batch
+cd ~/../usr/bin
 
-dos2unix batch
-chmod +x batch
+rm batchdl
+echo "cd /sdcard/Download">>batchdl
+echo "mkdir \$1">>batchdl
+echo "yt-dlp --ignore-errors --no-warnings --windows-filenames -f bv*+ba/b %aria2% -o \"\$1\%%(title).106s-high-%%(id).10s.%%(ext)s\" -a \"\$1.txt\"">>batchdl
+echo "cd ~">>batchdl
+
+dos2unix batchdl
+chmod +x batchdl
 
 rm update-setup
 echo "cd ~">>update-setup
