@@ -45,6 +45,18 @@ echo "cd ~">>batch
 dos2unix batch
 chmod +x batch
 
+rm update-setup
+echo "cd ~">>update-setup
+echo "rm termux-setup.sh">>update-setup
+echo "curl https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh -o termux-setup.sh">>update-setup
+echo "dos2unix termux-setup.sh">>update-setup
+echo "chmod+x termux-setup.sh">>update-setup
+echo "bash termux-setup.sh">>update-setup
+echo "cd ~">>update-setup
+
+dos2unix update-setup
+chmod +x update-setup
+
 cd ~
 
 echo "Installed successfully"
