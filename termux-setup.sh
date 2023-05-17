@@ -52,7 +52,6 @@ echo "curl https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/
 echo "dos2unix termux-setup.sh">>update-setup
 echo "chmod+x termux-setup.sh">>update-setup
 echo "bash termux-setup.sh">>update-setup
-echo "cd ~">>update-setup
 
 dos2unix update-setup
 chmod +x update-setup
