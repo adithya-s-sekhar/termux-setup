@@ -46,6 +46,7 @@ dos2unix batchdl
 
 echo "cd ~">>update-setup
 echo "rm -rf termux-setup">>update-setup
+echo "mkdir termux-setup">>update-setup
 echo "cd termux-setup">>update-setup
 echo "curl https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh>termux-setup.sh">>update-setup
 echo "dos2unix termux-setup.sh">>update-setup
