@@ -28,7 +28,7 @@ dos2unix server
 
 ## termux-url-opener
 echo "cd /sdcard/Download">>termux-url-opener
-echo "yt-dlp -f bv*+ba/b --downloader aria2c -o \"%(title)s-%(height)sp-%(id)s.%(ext)s\" \"\$1\" && echo \"\$1\">>downloaded.txt && exit">>termux-url-opener
+echo "yt-dlp -f bv*+ba/b --downloader aria2c -o \"%(title)100s-%(height)sp-%(id)10s.%(ext)s\" \"\$1\" && echo \"\$1\">>downloaded.txt && exit">>termux-url-opener
 echo "echo \"\$1\">>failed.txt">>termux-url-opener
 echo "exit">>termux-url-opener
 dos2unix termux-url-opener
