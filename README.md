@@ -2,29 +2,25 @@
 
 ## Includes
 
-1. yt-dlp for video downloads.
-2. A home screen widget for an http server serving 'Internal Storage' at http://\<device_ip>:8080/ or http://localhost:8080/.
+1. termux-url-opener: Download videos in highest quality by sharing to termux.
+2. server: A home screen widget for an http server serving 'Internal Storage' at http://\<device_ip>:8080/ or http://localhost:8080/.
+3. batchdl: Download videos from links in a text file into a folder with the text file's name.
+4. update-setup: Update changes from the repository and reinstalls this script.
 
 ## How to Install
 
 1. Install [termux](https://github.com/termux/termux-app/releases/latest) and [termux-widget](https://github.com/termux/termux-widget/releases/latest) from github.
 2. Open termux, grant storage permission with `termux-setup-storage` command.
-3. Download [termux-setup.sh](https://github.com/adithya-s-sekhar/termux-setup/raw/main/termux-setup.sh) from this repo to your 'Internal Storage' or your Download folder or anywhere.
-4. Navigate to the folder using termux, for example;
-  - `cd /sdcard/`
-  - `cd /sdcard/Download/`
-  - `cd /sdcard/Documents/`
-
-Fun fact: /sdcard is Android's nomenclature for Internal Storage. Not your removable sd card. Those will be /sdcard1. This is because in the early days of android an sd card was your Internal storage.
-
-5. Execute the script by `sh termux-setup.sh`.
+3. Download termux-setup.sh by `curl https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh>termux-setup.sh` pasting this into termux.
+4. Give executable permission with `chmod +x termux-setup.sh`.
+5. Execute the script by `bash termux-setup.sh`.
 6. There will be a lot of prompts where you'd have to press Y or I when updating. It's because termux's shipping packages haven't been updated for a while. Press Y everywhere.
 7. After installation, you can close termux.
 8. Depending on your Android skin you'd have to enable 'Display over other apps' permission for termux for the scripts to work.
 
 ## How to use
 
-### yt-dlp
+### Download by sharing to termux.
 1. Open any website or app with playing video in Chrome or any other app.
 2. Touch the share button and share to Termux.
 3. It will automatically download in the Highest possible quality and saves to your 'Download' folder.
@@ -35,6 +31,15 @@ There are plans to bring [AYC](https://github.com/adithya-s-sekhar/advanced-yout
 ### HTTP Server
 1. On your Android homescreen, Add a widget for termux actions and you'll see the 'server' script inside.
 2. Opening it will start termux in the background and your files will be accessible at http://\<device_ip>:8080/ or http://localhost:8080/
+
+### Batch download videos from text file using batchdl
+1. Save all your links into a text file (named without spaces) in any where in Internal Storage.
+2. Using termux navigate to the folder where the file is saved. (`cd /sdcard` takes you to Internal Storage).
+3. Enter `batchdl <filename>` (No need to add .txt).
+4. It will create a folder named `filename` and download all videos in the text file in the highest quality inside it.
+
+### Update script
+1. Enter `update-setup` and termux will download all changes from this repo and installs it.
 
 ## Links
 
