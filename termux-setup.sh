@@ -65,6 +65,13 @@ echo "Creating updater"
 echo "curl https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh | sh">update-setup
 dos2unix update-setup
 
+# deleting folders
+
+echo "Deleting old files and folders"
+
+rm -rf ~/.shortcuts
+rm -rf ~/bin
+
 # creating folders
 
 echo "Creating folders"
@@ -81,10 +88,8 @@ USR_BIN=~/../usr/bin
 
 # deleting old files from these folders
 
-echo "Deleting old scripts"
+echo "Deleting old scripts from usr/bin"
 
-rm $TASKS/server
-rm $BIN/termux-url-opener
 rm $USR_BIN/batchdl
 rm $USR_BIN/update-setup
 
