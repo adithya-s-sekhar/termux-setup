@@ -58,11 +58,11 @@ echo "yt-dlp -f bv*+ba/b --downloader aria2c -o \"%(title)s-%(height)sp-%(id)s.%
 echo "cd ~">>batchdl
 dos2unix batchdl
 
-echo "Creating upater"
+echo "Creating updater"
 
 ## update-setup
 
-echo "curl https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh |sh">update-setup
+echo "curl https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh | sh">update-setup
 dos2unix update-setup
 
 # creating folders
