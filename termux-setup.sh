@@ -2,21 +2,21 @@
 
 echo "Press Allow to give storage permissions"
 
-termux-setup-storage
+termux-setup-storage || echo "Unable to obtain storage permissions" && exit
 
 # update and install packages
 
 echo "Updating packages"
 
-yes | pkg up
+yes | pkg up || echo "Unable to update packages" && exit
 
 echo "Installing python, ffmpeg, aria2"
 
-yes | pkg install python ffmpeg aria2
+yes | pkg install python ffmpeg aria2 || echo "Unable to install packages" && exit
 
 echo "Installing yt-dlp"
 
-pip install yt-dlp
+pip install yt-dlp ||  echo "Unable to install yt-dlp" && exit
 
 # go to home folder to prepare setup
 
