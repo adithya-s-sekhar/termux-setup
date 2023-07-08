@@ -2,7 +2,7 @@
 
 echo "Press Allow to give storage permissions"
 
-termux-setup-storage || { echo "Unable to obtain storage permissions"; exit 1; }
+termux-setup-storage
 
 # update and install packages
 
