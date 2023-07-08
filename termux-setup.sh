@@ -1,9 +1,3 @@
-# get storage permissions
-
-echo "Press Allow to give storage permissions"
-
-termux-setup-storage
-
 # update and install packages
 
 echo "Updating packages"
