@@ -68,14 +68,7 @@ echo "Creating upater"
 
 ## update-setup
 
-echo "cd ~">>update-setup
-echo "rm -rf termux-setup">>update-setup
-echo "mkdir termux-setup">>update-setup
-echo "cd termux-setup">>update-setup
-echo "curl https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh>termux-setup.sh">>update-setup
-echo "dos2unix termux-setup.sh">>update-setup
-echo "chmod +x termux-setup.sh">>update-setup
-echo "bash termux-setup.sh">>update-setup
+echo "curl https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh |sh">>update-setup
 dos2unix update-setup
 
 # creating folders
