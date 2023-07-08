@@ -1,11 +1,8 @@
 # update and install packages
 
-apt update -y
-yes | apt upgrade -y
-apt update -y
-yes | apt upgrade -y
+yes | pkg up
 
-apt install python ffmpeg aria2 -y
+yes | pkg install python ffmpeg aria2
 pip install yt-dlp
 
 # go to home folder to prepare setup
