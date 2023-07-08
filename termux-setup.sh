@@ -1,3 +1,7 @@
+# get storage permissions
+
+termux-setup-storage
+
 # update and install packages
 
 yes | pkg up

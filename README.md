@@ -10,11 +10,10 @@
 ## How to Install
 
 1. Install [termux](https://github.com/termux/termux-app/releases/latest) and [termux-widget](https://github.com/termux/termux-widget/releases/latest) from github.
-2. Open termux, grant storage permission with `termux-setup-storage` command.
-3. Install the script with `curl -L https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh | sh`
-4. There will be a lot of prompts where you'd have to press Y or I when updating. It's because termux's shipping packages haven't been updated for a while. Press Y everywhere.
-5. After installation, you can close termux.
-6. Depending on your Android skin you'd have to enable 'Display over other apps' permission for termux for the scripts to work.
+2. Install the script with `curl -L https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh | sh`
+3. There will be a lot of prompts where you'd have to press Y or I when updating. It's because termux's shipping packages haven't been updated for a while. Press Y everywhere.
+4. After installation, you can close termux.
+5. Depending on your Android skin you'd have to enable 'Display over other apps' permission for termux for the scripts to work.
 
 ## How to use
 
