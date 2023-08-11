@@ -124,4 +124,4 @@ rm -rf termux-setup
 
 echo "Installed Successfully"
 echo
-echo "The script was last updated on 2023-Aug-11 11:20AM IST."
+echo "The script was last updated on 2023-Aug-11 11:22AM IST."
