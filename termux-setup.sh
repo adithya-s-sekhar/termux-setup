@@ -14,20 +14,9 @@ pip install yt-dlp ||  { echo "Unable to install yt-dlp"; exit 1; }
 
 # go to home folder to prepare setup
 
-cd
-
-# cleaning old files
-
-echo "Cleaning old setup folder"
-
-rm -rf termux-setup
-
-# creating setup folder
-
-echo "Creating setup folder"
-
-mkdir termux-setup
-cd termux-setup
+rm -rf ~/termux-setup
+mkdir ~/termux-setup
+cd ~/termux-setup
 
 # creating new scripts
 
@@ -124,4 +113,4 @@ rm -rf termux-setup
 
 echo "Installed Successfully"
 echo
-echo "The script was last updated on 2023-Aug-11 11:49AM IST."
+echo "The script was last updated on 2023-Aug-11 11:51AM IST."
