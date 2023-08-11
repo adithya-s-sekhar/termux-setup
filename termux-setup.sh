@@ -34,14 +34,14 @@ cd termux-setup
 echo "Creating python web server script"
 
 ## python web server
-echo "cd /sdcard">>server
+echo "cd /sdcard">server
 echo "python -m http.server 8080">>server
 dos2unix server
 
 echo "Creating termux share menu"
 
 ## termux-url-opener
-echo "cwd=\$(pwd)">>termux-url-opener
+echo "cwd=\$(pwd)">termux-url-opener
 echo "cd /sdcard/Download">>termux-url-opener
 echo "yt-dlp -f bv*+ba/b --windows-filenames --embed-chapters --embed-thumbnail --embed-subs --write-auto-sub -P home:\"\$cwd\" --downloader aria2c -o \"%(title)s-%(height)sp-%(id)s.%(ext)s\" \"\$1\" && echo \"\$1\">>downloaded.txt && exit">>termux-url-opener
 echo "echo \"\$1\">>failed.txt">>termux-url-opener
@@ -51,7 +51,7 @@ dos2unix termux-url-opener
 echo "Creating batch downloader"
 
 ## batchdl
-echo "cwd=\$(pwd)">>batchdl
+echo "cwd=\$(pwd)">batchdl
 echo "cd /sdcard/Download">>batchdl
 echo "mkdir \$1">>batchdl
 echo "cp \$1.txt \$1">>batchdl
@@ -63,8 +63,8 @@ echo "Creating updater"
 
 ## update-setup
 
-echo "cd ~">>update-setup
-echo "curl https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh | sh">update-setup
+echo "cd ~">update-setup
+echo "curl https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh | sh">>update-setup
 dos2unix update-setup
 
 # deleting folders
