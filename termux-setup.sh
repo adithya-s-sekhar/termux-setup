@@ -57,7 +57,6 @@ echo "mkdir \$1">>batchdl
 echo "cp \$1.txt \$1">>batchdl
 echo "cd \$1">>batchdl
 echo "yt-dlp -f bv*+ba/b --windows-filenames --embed-chapters --embed-thumbnail --embed-subs --write-auto-sub -P home:\"\$cwd\" --downloader aria2c -o \"%(title)s-%(height)sp-%(id)s.%(ext)s\" -a \"\$1.txt\"">>batchdl
-echo "cd ~">>batchdl
 dos2unix batchdl
 
 echo "Creating updater"
