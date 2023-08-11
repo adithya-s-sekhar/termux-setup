@@ -1,5 +1,8 @@
 # My personal setup for termux.
 
+### Note
+This is an entirely personal setup I shared because I thought others might find it useful. There are no guarantees, no obligations from my part to provide any support, updates, features, fixes or even commit messages. This repo only has one branch. It may be updated anytime.
+
 ## Includes
 
 1. [termux-url-opener](#download-by-sharing-to-termux): Download videos in highest quality by sharing to termux.
@@ -36,6 +39,7 @@ There are plans to bring [AYC](https://github.com/adithya-s-sekhar/advanced-yout
 
 ### Update script
 1. Enter `update-setup` and termux will download all changes from this repo and installs it.
+
 
 ## Links
 
