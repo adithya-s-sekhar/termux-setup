@@ -68,8 +68,11 @@ chmod +x $USR_BIN/update-setup
 
 # cleaning up install folder
 echo "Cleaning up"
+rm -rf ~\termux-setup
 
 # finished
 echo "Installed Successfully"
 echo
-echo "The script was last updated on 2023-Aug-11 12:10PM IST."
+echo "The script was last updated on 2023-Aug-11 12:12PM IST."
+
+# personal repo (no commit msg)
