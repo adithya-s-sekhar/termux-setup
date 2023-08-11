@@ -14,7 +14,7 @@ pip install yt-dlp ||  { echo "Unable to install yt-dlp"; exit 1; }
 
 # go to home folder to prepare setup
 
-cd ~
+cd
 
 # cleaning old files
 
@@ -63,7 +63,7 @@ echo "Creating updater"
 
 ## update-setup
 
-echo "cd ~">update-setup
+echo "cd">update-setup
 echo "curl https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh?\$RANDOM | sh">>update-setup
 dos2unix update-setup
 
@@ -124,4 +124,4 @@ rm -rf termux-setup
 
 echo "Installed Successfully"
 echo
-echo "The script was last updated on 2023-Aug-11 11:43AM IST."
+echo "The script was last updated on 2023-Aug-11 11:47AM IST."
