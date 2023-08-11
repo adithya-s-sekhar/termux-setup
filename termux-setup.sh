@@ -64,6 +64,7 @@ echo "Creating updater"
 
 ## update-setup
 
+echo "cd ~">>update-setup
 echo "curl https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh | sh">update-setup
 dos2unix update-setup
 
