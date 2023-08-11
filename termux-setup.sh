@@ -123,6 +123,5 @@ rm -rf termux-setup
 # finished
 
 echo "Installed Successfully"
-
-# iso 8601 but am/pm is easier to read. This is for humans anyway.
-echo "The script was last updated on 2023-07-08 11:20AM IST."
+echo.
+echo "The script was last updated on 2023-Aug-11 11:18AM IST."
