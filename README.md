@@ -2,10 +2,9 @@
 
 ## Includes
 
-1. termux-url-opener: Download videos in highest quality by sharing to termux.
-2. server: A home screen widget for an http server serving 'Internal Storage' at http://\<device_ip>:8080/ or http://localhost:8080/.
-3. batchdl: Download videos from links in a text file into a folder with the text file's name.
-4. update-setup: Update changes from the repository and reinstalls this script.
+1. [termux-url-opener](#download-by-sharing-to-termux): Download videos in highest quality by sharing to termux.
+2. [server](#http-server): A home screen widget for an http server serving 'Internal Storage' at http://\<device_ip>:8080/ or http://localhost:8080/.
+3. [update-setup](#update-script): Update changes from the repository and reinstalls this script.
 
 ## How to Install
 
@@ -33,12 +32,6 @@ There are plans to bring [AYC](https://github.com/adithya-s-sekhar/advanced-yout
 ### HTTP Server
 1. On your Android homescreen, Add a widget for termux actions and you'll see the 'server' script inside.
 2. Opening it will start termux in the background and your files will be accessible at http://\<device_ip>:8080/ or http://localhost:8080/
-
-### Batch download videos from text file using batchdl
-1. Save all your links into a text file (named without spaces) in any where in Internal Storage.
-2. Using termux navigate to the folder where the file is saved. (`cd /sdcard` takes you to Internal Storage).
-3. Enter `batchdl <filename>` (No need to add .txt).
-4. It will create a folder named `filename` and download all videos in the text file in the highest quality inside it.
 
 ### Update script
 1. Enter `update-setup` and termux will download all changes from this repo and installs it.

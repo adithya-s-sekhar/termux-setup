@@ -24,21 +24,10 @@ dos2unix server
 ## termux-url-opener
 echo "Creating termux share menu"
 echo "cwd=\$(pwd)">termux-url-opener
-echo "cd /sdcard/Download">>termux-url-opener
-echo "yt-dlp -f bv*+ba/b --windows-filenames --embed-chapters --embed-thumbnail --embed-subs --write-auto-sub -P home:\"\$cwd\" --downloader aria2c -o \"%(title)s-%(height)sp-%(id)s.%(ext)s\" \"\$1\" && echo \"\$1\">>downloaded.txt && exit">>termux-url-opener
+echo "yt-dlp -f bv*+ba/b --windows-filenames --embed-chapters --embed-thumbnail --embed-subs --write-auto-sub -P temp:\"\$cwd\" -P home:\"/sdcard/Download\" --downloader aria2c -o \"%(title)s-%(height)sp-%(id)s.%(ext)s\" \"\$1\" && echo \"\$1\">>downloaded.txt && exit">>termux-url-opener
 echo "echo \"\$1\">>failed.txt">>termux-url-opener
 echo "exit">>termux-url-opener
 dos2unix termux-url-opener
-
-## batchdl
-echo "Creating batch downloader"
-echo "cwd=\$(pwd)">batchdl
-echo "cd /sdcard/Download">>batchdl
-echo "mkdir \$1">>batchdl
-echo "cp \$1.txt \$1">>batchdl
-echo "cd \$1">>batchdl
-echo "yt-dlp -f bv*+ba/b --windows-filenames --embed-chapters --embed-thumbnail --embed-subs --write-auto-sub -P home:\"\$cwd\" --downloader aria2c -o \"%(title)s-%(height)sp-%(id)s.%(ext)s\" -a \"\$1.txt\"">>batchdl
-dos2unix batchdl
 
 ## update-setup
 echo "Creating updater"
@@ -63,21 +52,18 @@ USR_BIN=~/../usr/bin
 
 # deleting old files from these folders
 echo "Deleting old scripts from usr/bin"
-rm $USR_BIN/batchdl
 rm $USR_BIN/update-setup
 
 # copying files
 echo "Copying new scripts"
 cp server $TASKS
 cp termux-url-opener $BIN
-cp batchdl $USR_BIN
 cp update-setup $USR_BIN
 
 # setting permissions
 echo "Settings permissions"
 chmod +x $TASKS/server
 chmod +x $BIN/termux-url-opener
-chmod +x $USR_BIN/batchdl
 chmod +x $USR_BIN/update-setup
 
 # cleaning up install folder
@@ -86,4 +72,4 @@ echo "Cleaning up"
 # finished
 echo "Installed Successfully"
 echo
-echo "The script was last updated on 2023-Aug-11 11:56AM IST."
+echo "The script was last updated on 2023-Aug-11 12:10PM IST."
