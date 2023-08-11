@@ -64,7 +64,7 @@ echo "Creating updater"
 ## update-setup
 
 echo "cd">update-setup
-echo "curl https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh?\$RANDOM | sh">>update-setup
+echo "curl -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh?\$RANDOM | sh">>update-setup
 dos2unix update-setup
 
 # deleting folders
@@ -124,4 +124,4 @@ rm -rf termux-setup
 
 echo "Installed Successfully"
 echo
-echo "The script was last updated on 2023-Aug-11 11:47AM IST."
+echo "The script was last updated on 2023-Aug-11 11:49AM IST."
