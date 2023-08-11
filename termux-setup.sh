@@ -43,7 +43,7 @@ echo "Creating termux share menu"
 ## termux-url-opener
 echo "cwd=\$(pwd)">>termux-url-opener
 echo "cd /sdcard/Download">>termux-url-opener
-echo "yt-dlp -f bv*+ba/b --windows-filenames --embed-chapters --embed-thumbnail --embed-subtitles --write-auto-sub -P home:\"\$cwd\" --downloader aria2c -o \"%(title)s-%(height)sp-%(id)s.%(ext)s\" \"\$1\" && echo \"\$1\">>downloaded.txt && exit">>termux-url-opener
+echo "yt-dlp -f bv*+ba/b --windows-filenames --embed-chapters --embed-thumbnail --embed-subs --write-auto-sub -P home:\"\$cwd\" --downloader aria2c -o \"%(title)s-%(height)sp-%(id)s.%(ext)s\" \"\$1\" && echo \"\$1\">>downloaded.txt && exit">>termux-url-opener
 echo "echo \"\$1\">>failed.txt">>termux-url-opener
 echo "exit">>termux-url-opener
 dos2unix termux-url-opener
@@ -56,7 +56,7 @@ echo "cd /sdcard/Download">>batchdl
 echo "mkdir \$1">>batchdl
 echo "cp \$1.txt \$1">>batchdl
 echo "cd \$1">>batchdl
-echo "yt-dlp -f bv*+ba/b --windows-filenames --embed-chapters --embed-thumbnail --embed-subtitles --write-auto-sub -P home:\"\$cwd\" --downloader aria2c -o \"%(title)s-%(height)sp-%(id)s.%(ext)s\" -a \"\$1.txt\"">>batchdl
+echo "yt-dlp -f bv*+ba/b --windows-filenames --embed-chapters --embed-thumbnail --embed-subs --write-auto-sub -P home:\"\$cwd\" --downloader aria2c -o \"%(title)s-%(height)sp-%(id)s.%(ext)s\" -a \"\$1.txt\"">>batchdl
 echo "cd ~">>batchdl
 dos2unix batchdl
 
