@@ -13,7 +13,7 @@ The following folders will be deleted when you run this script. If you already u
 - "~/.shortcuts"
 - "~/bin"
 
-1. Install [termux](https://github.com/termux/termux-app/releases/latest) and [termux-widget](https://github.com/termux/termux-widget/releases/latest)(only if you want the server feature) from github.
+1. Install [termux](https://github.com/termux/termux-app/releases/latest) and [termux-widget](https://github.com/termux/termux-widget/releases/latest) (only if you want the server feature) from github.
 2. Open termux and grant storage permissions with `termux-setup-storage`.
 3. Update all the inbuilt packages with `yes | pkg up`.
 4. Install the script with `curl -L https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh | sh`
