@@ -15,7 +15,8 @@ The following folders will be deleted when you run this script. If you already u
 
 1. Install [termux](https://github.com/termux/termux-app/releases/latest) and [termux-widget](https://github.com/termux/termux-widget/releases/latest) from github.
 2. Open termux and grant storage permissions with `termux-setup-storage`.
-3. Install the script with `curl -L https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh | sh`
+3. Update all the inbuilt packages with `yes | pkg up`.
+4. Install the script with `curl -L https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh | sh`
 
 *Note: Depending on your Android skin you'd have to enable 'Display over other apps' permission for termux for the scripts to work.*
 
