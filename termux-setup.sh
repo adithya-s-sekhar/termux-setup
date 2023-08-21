@@ -34,7 +34,7 @@ echo "exit">>$BIN/termux-url-opener
 
 ## update-setup
 echo "Creating updater"
-echo "curl -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh?\$RANDOM | sh">>$USR_BIN/update-setup
+echo "curl -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh?\$RANDOM | sh">$USR_BIN/update-setup
 
 # setting permissions
 echo "Settings permissions"
