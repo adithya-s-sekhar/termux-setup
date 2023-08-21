@@ -24,7 +24,7 @@ dos2unix server
 ## termux-url-opener
 echo "Creating termux share menu"
 echo "cwd=\$(pwd)">termux-url-opener
-echo "yt-dlp -f bv*+ba/b --windows-filenames --embed-chapters --embed-thumbnail --embed-subs --write-auto-sub -P temp:\"\$cwd\" -P home:\"/sdcard/Download\" --downloader aria2c -o \"%(title)s-%(height)sp-%(id)s.%(ext)s\" \"\$1\" && echo \"\$1\">>downloaded.txt && exit">>termux-url-opener
+echo "yt-dlp -f bv*+ba/b --windows-filenames --embed-chapters --embed-subs --write-auto-sub -P temp:\"\$cwd\" -P home:\"/sdcard/Download\" --downloader aria2c -o \"%(title)s-%(height)sp-%(id)s.%(ext)s\" \"\$1\" && echo \"\$1\">>downloaded.txt && exit">>termux-url-opener
 echo "echo \"\$1\">>failed.txt">>termux-url-opener
 echo "exit">>termux-url-opener
 dos2unix termux-url-opener
@@ -73,6 +73,6 @@ rm -rf ~\termux-setup
 # finished
 echo "Installed Successfully"
 echo
-echo "The script was last updated on 2023-Aug-11 12:12PM IST."
+echo "The script was last updated on 2023-Aug-21 05:04PM IST."
 
 # personal repo (no commit msg)
