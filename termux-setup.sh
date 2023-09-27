@@ -28,9 +28,9 @@ echo "python -m http.server 8080">>$TASKS/server
 ## termux-url-opener
 echo "Creating termux share menu"
 echo "cwd=\$(pwd)">$BIN/termux-url-opener
-echo "mkdir -p /sdcard/Pictures/Termux">$BIN/termux-url-opener
-echo "yt-dlp -f bv*+ba/b --windows-filenames --embed-chapters --no-mtime -P temp:\"\$cwd\" -P home:\"/sdcard/Pictures/Termux\" -o \"%(title)s-%(id)s.%(ext)s\" \"\$1\" && echo \"\$1\">>/sdcard/Pictures/Termux/downloaded.txt && exit">>$BIN/termux-url-opener
-echo "echo \"\$1\">>/sdcard/Pictures/Termux/failed.txt">>$BIN/termux-url-opener
+echo "mkdir -p /sdcard/Movies/Termux">$BIN/termux-url-opener
+echo "yt-dlp -f bv*+ba/b --windows-filenames --embed-chapters --no-mtime -P temp:\"\$cwd\" -P home:\"/sdcard/Movies/Termux\" -o \"%(title)s-%(id)s.%(ext)s\" \"\$1\" && echo \"\$1\">>/sdcard/Movies/Termux/downloaded.txt && exit">>$BIN/termux-url-opener
+echo "echo \"\$1\">>/sdcard/Movies/Termux/failed.txt">>$BIN/termux-url-opener
 echo "exit">>$BIN/termux-url-opener
 
 ## update-setup
