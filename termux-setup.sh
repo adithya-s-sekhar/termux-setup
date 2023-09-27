@@ -45,4 +45,4 @@ chmod +x $USR_BIN/update-setup
 # finished
 echo "Installed Successfully"
 echo
-echo "The script was last updated on 2023-Aug-31 02:36PM IST."
+echo "The script was last updated on 2023-Sep-27 08:02AM IST."
