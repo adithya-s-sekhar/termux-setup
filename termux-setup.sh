@@ -28,7 +28,7 @@ echo "python -m http.server 8080">>$TASKS/server
 ## termux-url-opener
 echo "Creating termux share menu"
 echo "cwd=\$(pwd)">$BIN/termux-url-opener
-echo "yt-dlp -f bv*+ba/b --windows-filenames --embed-chapters --embed-subs --write-auto-sub -P temp:\"\$cwd\" -P home:\"/sdcard/Download\" --downloader aria2c -o \"%(title)s-%(height)sp-%(id)s.%(ext)s\" \"\$1\" && echo \"\$1\">>/sdcard/Download/downloaded.txt && exit">>$BIN/termux-url-opener
+echo "yt-dlp -f bv*+ba/b --windows-filenames --embed-chapters --embed-subs --write-auto-sub -P temp:\"\$cwd\" -P home:\"/sdcard/Download\" -o \"%(title)s-%(height)sp-%(id)s.%(ext)s\" \"\$1\" && echo \"\$1\">>/sdcard/Download/downloaded.txt && exit">>$BIN/termux-url-opener
 echo "echo \"\$1\">>/sdcard/Download/failed.txt">>$BIN/termux-url-opener
 echo "exit">>$BIN/termux-url-opener
 
