@@ -28,9 +28,9 @@ echo "python -m http.server 8080">>$TASKS/server
 ## termux-url-opener
 echo "Creating termux share menu"
 echo "cwd=\$(pwd)">$BIN/termux-url-opener
-echo "mkdir -p /sdcard/Download/Termux">$BIN/termux-url-opener
-echo "yt-dlp -f bv*+ba/b --windows-filenames --embed-chapters --no-mtime -P temp:\"\$cwd\" -P home:\"/sdcard/Download/Termux\" -o \"%(title)s-%(id)s.%(ext)s\" \"\$1\" && echo \"\$1\">>/sdcard/Download/Termux/downloaded.txt && exit">>$BIN/termux-url-opener
-echo "echo \"\$1\">>/sdcard/Download/Termux/failed.txt">>$BIN/termux-url-opener
+echo "mkdir -p /sdcard/Movies/Termux">$BIN/termux-url-opener
+echo "yt-dlp -f bv*+ba/b --windows-filenames --embed-chapters --no-mtime -P temp:\"\$cwd\" -P home:\"/sdcard/Movies/Termux\" -o \"%(title)s-%(id)s.%(ext)s\" \"\$1\" && echo \"\$1\">>/sdcard/Movies/Termux/downloaded.txt && exit">>$BIN/termux-url-opener
+echo "echo \"\$1\">>/sdcard/Movies/Termux/failed.txt">>$BIN/termux-url-opener
 echo "exit">>$BIN/termux-url-opener
 
 ## update-setup
@@ -46,4 +46,4 @@ chmod +x $USR_BIN/update-setup
 # finished
 echo "Installed Successfully"
 echo
-echo "The script was last updated on 2023-Sep-27 08:21AM IST."
+echo "The script was last updated on 2023-Sep-27 09:01AM IST."

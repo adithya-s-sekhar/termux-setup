@@ -28,7 +28,7 @@ The following folders will be deleted when you run this script. If you already u
 ### Download by sharing to termux.
 1. Open any website or app with playing video in Chrome or any other app.
 2. Touch the share button and share to Termux.
-3. It will automatically download in the Highest possible quality and saves to your 'Download' folder.
+3. It will automatically download in the Highest possible quality and saves to your 'Movies' folder in Internal Storage.
 4. It will also save all successfully downloaded urls to a 'Downloaded.txt' file and failed urls to 'Failed.txt'. This can help with debugging.
 
 There are plans to bring [AYC](https://github.com/adithya-s-sekhar/advanced-youtube-client-ayc) to termux for more features and better quality selectors.
