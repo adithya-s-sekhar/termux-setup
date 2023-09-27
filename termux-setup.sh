@@ -29,8 +29,8 @@ echo "python -m http.server 8080">>$TASKS/server
 echo "Creating termux share menu"
 echo "cwd=\$(pwd)">$BIN/termux-url-opener
 echo "mkdir /sdcard/Download/Termux">$BIN/termux-url-opener
-echo "yt-dlp -f bv*+ba/b --windows-filenames --embed-chapters --no-mtime -P temp:\"\$cwd\" -P home:\"/sdcard/Download/Termux\" -o \"%(title)s-%(id)s.%(ext)s\" \"\$1\" && echo \"\$1\">>/sdcard/Download/downloaded.txt && exit">>$BIN/termux-url-opener
-echo "echo \"\$1\">>/sdcard/Download/failed.txt">>$BIN/termux-url-opener
+echo "yt-dlp -f bv*+ba/b --windows-filenames --embed-chapters --no-mtime -P temp:\"\$cwd\" -P home:\"/sdcard/Download/Termux\" -o \"%(title)s-%(id)s.%(ext)s\" \"\$1\" && echo \"\$1\">>/sdcard/Download/Termux/downloaded.txt && exit">>$BIN/termux-url-opener
+echo "echo \"\$1\">>/sdcard/Download/Termux/failed.txt">>$BIN/termux-url-opener
 echo "exit">>$BIN/termux-url-opener
 
 ## update-setup
