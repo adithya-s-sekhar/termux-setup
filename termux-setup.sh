@@ -66,4 +66,4 @@ chmod +x $UPDATE_SETUP
 # finished
 echo "Installed Successfully"
 echo
-echo "The script was last updated on 2024-Jun-05 16:57PM IST."
+echo "The script was last updated on 2024-Jun-05 17:08PM IST."
