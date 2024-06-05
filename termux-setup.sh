@@ -18,32 +18,52 @@ TASKS=~/.shortcuts/tasks
 BIN=~/bin
 USR_BIN=~/../usr/bin
 
+# setting file variables
+SERVER=$TASKS/server
+TERMUX_URL_OPENER=$BIN/termux-url-opener
+UPDATE_SETUP=$USR_BIN/update-setup
+
 # creating new scripts
 
 ## python web server
 echo "Creating python web server script"
-echo "cd /sdcard">$TASKS/server
-echo "python -m http.server 8080">>$TASKS/server
+echo "cd /sdcard">$SERVER
+echo "python -m http.server 8080">>$SERVER
 
 ## termux-url-opener
 echo "Creating termux share menu"
-echo "cwd=\$(pwd)">$BIN/termux-url-opener
-echo "mkdir -p /sdcard/Download/Termux">$BIN/termux-url-opener
-echo "yt-dlp -f bv*+ba/b --windows-filenames --embed-chapters --no-mtime -P temp:\"\$cwd\" -P home:\"/sdcard/Download/Termux\" -o \"%(title)s-%(id)s.%(ext)s\" \"\$1\" && echo \"\$1\">>/sdcard/Download/Termux/downloaded.txt && exit">>$BIN/termux-url-opener
-echo "echo \"\$1\">>/sdcard/Download/Termux/failed.txt">>$BIN/termux-url-opener
-echo "exit">>$BIN/termux-url-opener
+echo "cwd=\$(pwd)">$TERMUX_URL_OPENER
+echo "mkdir -p /sdcard/Download/Termux/yt-dlp">>$TERMUX_URL_OPENER
+echo "mkdir -p /sdcard/Download/Termux/gallery-dl">>$TERMUX_URL_OPENER
+echo "echo \"Choose app\"">>$TERMUX_URL_OPENER
+echo "echo.">>$TERMUX_URL_OPENER
+echo "echo\" - 1) yt-dlp\"">>$TERMUX_URL_OPENER
+echo "echo\" - 2) gallery-dl\"">>$TERMUX_URL_OPENER
+echo "echo.">>$TERMUX_URL_OPENER
+echo "read -n1 choice">>$TERMUX_URL_OPENER
+echo "if [[ \$choice -eq 1 ]]">>$TERMUX_URL_OPENER
+echo "then">>$TERMUX_URL_OPENER
+echo "yt-dlp -f bv*+ba/b --windows-filenames --embed-chapters --no-mtime -P temp:\"\$cwd\" -P home:\"/sdcard/Download/Termux/yt-dlp\" -o \"%(title)s-%(id)s.%(ext)s\" \"\$1\" && echo \"\$1\">>/sdcard/Download/Termux/yt-dlp/downloaded.txt && exit">>$TERMUX_URL_OPENER
+echo "echo \"\$1\">>/sdcard/Download/Termux/yt-dlp/failed.txt">>$TERMUX_URL_OPENER
+echo "exit">>$TERMUX_URL_OPENER
+echo "elif [[ \$choice -eq 2 ]]">>$TERMUX_URL_OPENER
+echo "then">>$TERMUX_URL_OPENER
+echo "gallery-dl -d \"/sdcard/Download/Termux/gallery-dl\" \"\$1\" && echo \"\$1\">>/sdcard/Download/Termux/gallery-dl/downloaded.txt && exit">>$TERMUX_URL_OPENER
+echo "echo \"\$1\">>/sdcard/Download/Termux/gallery-dl/failed.txt">>$TERMUX_URL_OPENER
+echo "fi">>$TERMUX_URL_OPENER
+echo "exit">>$TERMUX_URL_OPENER
 
 ## update-setup
 echo "Creating updater"
-echo "curl -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh?\$RANDOM | sh">$USR_BIN/update-setup
+echo "curl -H 'Cache-Control: no-cache, no-store' https://raw.githubusercontent.com/adithya-s-sekhar/termux-setup/main/termux-setup.sh?\$RANDOM | sh">$UPDATE_SETUP
 
 # setting permissions
 echo "Settings permissions"
-chmod +x $TASKS/server
-chmod +x $BIN/termux-url-opener
-chmod +x $USR_BIN/update-setup
+chmod +x $SERVER
+chmod +x $TERMUX_URL_OPENER
+chmod +x $UPDATE_SETUP
 
 # finished
 echo "Installed Successfully"
 echo
-echo "The script was last updated on 2023-Sep-27 08:21AM IST."
+echo "The script was last updated on 2024-Jun-05 16:57PM IST."
