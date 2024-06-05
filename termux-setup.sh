@@ -5,8 +5,8 @@ yes | pkg up || { echo "Unable to update packages"; exit 1; }
 echo "Installing python, ffmpeg, aria2"
 yes | pkg install python ffmpeg aria2 || { echo "Unable to install packages"; exit 1; }
 
-echo "Installing yt-dlp"
-pip install yt-dlp ||  { echo "Unable to install yt-dlp"; exit 1; }
+echo "Installing yt-dlp and gallery-dl"
+pip install yt-dlp gallery-dl ||  { echo "Unable to install python packages"; exit 1; }
 
 # creating folders
 echo "Creating folders"
@@ -36,11 +36,11 @@ echo "cwd=\$(pwd)">$TERMUX_URL_OPENER
 echo "mkdir -p /sdcard/Download/Termux/yt-dlp">>$TERMUX_URL_OPENER
 echo "mkdir -p /sdcard/Download/Termux/gallery-dl">>$TERMUX_URL_OPENER
 echo "echo \"Choose app\"">>$TERMUX_URL_OPENER
-echo "echo.">>$TERMUX_URL_OPENER
-echo "echo\" - 1) yt-dlp\"">>$TERMUX_URL_OPENER
-echo "echo\" - 2) gallery-dl\"">>$TERMUX_URL_OPENER
-echo "echo.">>$TERMUX_URL_OPENER
-echo "read -n1 choice">>$TERMUX_URL_OPENER
+echo "echo .">>$TERMUX_URL_OPENER
+echo "echo \" - 1) yt-dlp\"">>$TERMUX_URL_OPENER
+echo "echo \" - 2) gallery-dl\"">>$TERMUX_URL_OPENER
+echo "echo .">>$TERMUX_URL_OPENER
+echo "read choice">>$TERMUX_URL_OPENER
 echo "if [[ \$choice -eq 1 ]]">>$TERMUX_URL_OPENER
 echo "then">>$TERMUX_URL_OPENER
 echo "yt-dlp -f bv*+ba/b --windows-filenames --embed-chapters --no-mtime -P temp:\"\$cwd\" -P home:\"/sdcard/Download/Termux/yt-dlp\" -o \"%(title)s-%(id)s.%(ext)s\" \"\$1\" && echo \"\$1\">>/sdcard/Download/Termux/yt-dlp/downloaded.txt && exit">>$TERMUX_URL_OPENER
