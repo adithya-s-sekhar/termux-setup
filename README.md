@@ -5,7 +5,7 @@ This is an entirely personal setup I shared because I thought others might find 
 
 ## Includes
 
-1. [termux-url-opener](#download-by-sharing-to-termux): Download videos in highest quality by sharing to termux.
+1. [termux-url-opener](#download-by-sharing-to-termux): By sharing to termux, either download videos in highest quality with yt-dlp or image/video galleries with gallery-dl.
 2. [server](#http-server): A home screen widget for an http server serving 'Internal Storage' at http://\<device_ip>:8080/ or http://localhost:8080/.
 3. [update-setup](#update-script): Update changes from the repository and reinstalls this script.
 
@@ -28,8 +28,9 @@ The following folders will be deleted when you run this script. If you already u
 ### Download by sharing to termux.
 1. Open any website or app with playing video in Chrome or any other app.
 2. Touch the share button and share to Termux.
-3. It will automatically download in the Highest possible quality and saves to your 'Download' folder.
-4. It will also save all successfully downloaded urls to a 'Downloaded.txt' file and failed urls to 'Failed.txt'. This can help with debugging.
+3. Choose if you want yt-dlp or gallery-dl to handle the link for videos and image/video galleries respectively.
+4. It will automatically download in the Highest possible quality and saves to your 'Download' folder.
+5. It will also save all successfully downloaded urls to a 'Downloaded.txt' file and failed urls to 'Failed.txt'. This can help with debugging.
 
 There are plans to bring [AYC](https://github.com/adithya-s-sekhar/advanced-youtube-client-ayc) to termux for more features and better quality selectors.
 
@@ -47,6 +48,6 @@ There are plans to bring [AYC](https://github.com/adithya-s-sekhar/advanced-yout
 
 [Termux:Widget](https://github.com/termux/termux-widget/)
 
-[the-termux-project](https://github.com/adithya-s-sekhar/the-termux-project/)
+[the-termux-project](https://github.com/adithya-s-sekhar/the-termux-project/) (Discontinued)
 
 [Advanced Youtube Client - AYC](https://github.com/adithya-s-sekhar/advanced-youtube-client-ayc/)
