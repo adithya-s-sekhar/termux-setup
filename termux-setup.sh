@@ -43,7 +43,7 @@ echo "echo .">>$TERMUX_URL_OPENER
 echo "read choice">>$TERMUX_URL_OPENER
 echo "if [ \$choice -eq 1 ]">>$TERMUX_URL_OPENER
 echo "then">>$TERMUX_URL_OPENER
-echo "yt-dlp -f bv*+ba/b --windows-filenames --embed-chapters --no-mtime -P temp:\"\$cwd\" -P home:\"/sdcard/Download/Termux/yt-dlp\" -o \"%(title)s-%(id)s.%(ext)s\" \"\$1\" && echo \"\$1\">>/sdcard/Download/Termux/yt-dlp/downloaded.txt && exit">>$TERMUX_URL_OPENER
+echo "yt-dlp -f bv*+ba/b --downloader aria2c --windows-filenames --embed-chapters --no-mtime -P temp:\"\$cwd\" -P home:\"/sdcard/Download/Termux/yt-dlp\" -o \"%(title)s-%(id)s.%(ext)s\" \"\$1\" && echo \"\$1\">>/sdcard/Download/Termux/yt-dlp/downloaded.txt && exit">>$TERMUX_URL_OPENER
 echo "echo \"\$1\">>/sdcard/Download/Termux/yt-dlp/failed.txt">>$TERMUX_URL_OPENER
 echo "exit">>$TERMUX_URL_OPENER
 echo "elif [ \$choice -eq 2 ]">>$TERMUX_URL_OPENER
@@ -66,4 +66,4 @@ chmod +x $UPDATE_SETUP
 # finished
 echo "Installed Successfully"
 echo
-echo "The script was last updated on 2024-Jun-06 09:23AM IST."
+echo "The script was last updated on 2024-Jun-28 04:56AM IST."
